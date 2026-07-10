@@ -1,0 +1,15 @@
+.gridWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.grid {
+  --cols: 3;
+
+  display: grid;
+  grid-area: 1 / 1 / 1 / 1;
+  grid-template-columns: repeat(var(--cols), 1fr);
+}
+
+/* todo: tablet, mobile */

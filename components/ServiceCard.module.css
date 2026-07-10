@@ -1,0 +1,12 @@
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: calc(4 * var(--unit));
+  grid-area: 1 / 1 / 1 / 1;
+}

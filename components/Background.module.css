@@ -1,0 +1,14 @@
+.background {
+  display: grid;
+  grid-area: 1 / 1 / 1 / 1;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.color {
+  grid-area: 1 / 1 / 1 / 1;
+}
+
+.pattern {
+  grid-area: 1 / 1 / 1 / 1;
+}

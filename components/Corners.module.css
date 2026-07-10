@@ -1,0 +1,23 @@
+.corners {
+  display: grid;
+  grid-area: 1 / 1 / 1 / 1;
+  grid-template-columns: calc(8 * var(--unit)) 1fr calc(8 * var(--unit));
+  grid-template-rows: calc(8 * var(--unit)) 1fr calc(8 * var(--unit));
+  padding: calc(0.5 * var(--unit));
+}
+
+.topLeft {
+  grid-area: 1 / 1 / 1 / 1;
+}
+
+.topRight {
+  grid-area: 1 / 3 / 1 / 3;
+}
+
+.bottomLeft {
+  grid-area: 3 / 1 / 3 / 1;
+}
+
+.bottomRight {
+  grid-area: 3 / 3 / 3 / 3;
+}

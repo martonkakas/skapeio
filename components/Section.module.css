@@ -1,0 +1,16 @@
+.section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  overflow: hidden;
+}
+
+.content {
+  z-index: 1;
+  grid-area: 1 / 1 / 1 / 1;
+  position: relative;
+}
+
+.sculpture {
+  grid-area: 1 / 1 / 1 / 1;
+}
