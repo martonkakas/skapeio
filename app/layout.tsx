@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
-import { Geist,JetBrains_Mono } from 'next/font/google';
+import { Geist, JetBrains_Mono } from 'next/font/google';
 
 import './globals.css';
 
@@ -15,12 +15,12 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: 'Skape | Cloud CMS & IT Solutions',
-  description: 'Military-industrial website for Skape.io.',
+  title: 'skape.io',
+  description: 'we do things',
 };
 
 type RootLayoutProps = {
-  children: React.ReactNode
+  children: ReactNode
 };
 
 const RootLayout = ({ 

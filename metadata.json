@@ -1,6 +1,6 @@
 {
-  "name": "Skape",
-  "description": "Minimalistic, black-based, military-industrial website for Skape.io.",
+  "name": "skape.io",
+  "description": "the website of skape.io",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": []
 }

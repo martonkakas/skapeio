@@ -15,8 +15,8 @@ const JordBanner = (): ReactNode => (
     id="jord" 
     decorate={true}
   >
-    <div className="absolute right-[-20%] md:right-[-10%] top-[-20%] bottom-[-20%] w-[80%] md:w-[60%] z-0 pointer-events-none opacity-60 md:opacity-100">
-      <Canvas camera={{ position: [0, 0, 30], fov: 45 }}>
+    <div className="absolute right-[0] md:right-[-10%] top-[-20%] bottom-[-20%] w-[100%] md:w-[100%] lg:w-[60%] z-0 pointer-events-none opacity-40 md:opacity-100">
+      <Canvas dpr={[1, 1.5]} camera={{ position: [0, 0, 30], fov: 45 }}>
         <Planet />
       </Canvas>
     </div>

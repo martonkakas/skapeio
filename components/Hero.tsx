@@ -27,14 +27,14 @@ const Hero = (): ReactNode => {
       className="min-h-screen w-full"
     >
       <Container className={styles.container}>
-        <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-tighter leading-[0.9] mix-blend-difference max-w-5xl">
+        <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-[-0.05em] leading-[0.9] mix-blend-difference max-w-5xl">
           hello, we are skape.io and we do{' '}
           <span className="relative inline-flex items-center">
             <AnimatePresence mode="wait">
               <motion.span
                 key={index}
                 initial={{ opacity: 0, filter: 'blur(10px)', letterSpacing: '-0.05em' }}
-                animate={{ opacity: 1, filter: 'blur(0px)', letterSpacing: 'normal' }}
+                animate={{ opacity: 1, filter: 'blur(0px)', letterSpacing: '-0.05em' }}
                 exit={{ opacity: 0, filter: 'blur(10px)', letterSpacing: '0.05em' }}
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 className="absolute left-0 whitespace-nowrap"

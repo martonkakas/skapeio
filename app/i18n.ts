@@ -33,7 +33,7 @@ const i18n = {
       index: '01',
       title: 'About us',
       text: [
-        'We operate in the shadows of the digital realm, providing uncompromising infrastructure and architectural solutions. Skape is not just a technology provider; we are the silent partners in your most critical operations, ensuring that your digital footprint is secure, scalable, and resilient against any threat. Our methodologies are forged in the fires of high-stakes environments where failure is not an option.',
+        'We operate in the shadows of the digital realm, providing uncompromising infrastructure and architectural solutions. skape.io is not just a technology provider; we are the silent partners in your most critical operations, ensuring that your digital footprint is secure, scalable, and resilient against any threat. Our methodologies are forged in the fires of high-stakes environments where failure is not an option.',
         'By leveraging cutting-edge cloud native principles, Zero Trust architectures, and advanced deployment strategies, we craft environments that are as impenetrable as they are efficient. Every line of code, every network configuration, and every infrastructure deployment is executed with military precision. We don&apos;t just build systems; we engineer strategic advantages.'
       ]
     },

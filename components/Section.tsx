@@ -36,7 +36,7 @@ const Section = ({
     }
     {sculpture && 
       <div className={styles.sculpture}>
-        <Canvas camera={{ position: [0, 0, 40], fov: 45 }}>
+        <Canvas dpr={[1, 1.5]} camera={{ position: [0, 0, 40], fov: 45 }}>
           <Sculpture />
         </Canvas>
       </div>
