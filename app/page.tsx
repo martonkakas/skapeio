@@ -10,16 +10,15 @@ import References from '@/components/References';
 import Services from '@/components/Services';
 import TopBar from '@/components/TopLink';
 
+
 const classNames = {
-  main: `min-h-screen relative`,
   content: `divide-y divide-white/10`
 }
 
 const Home = (): ReactNode => (
-  <main className={classNames.main}>
+  <main>
     <TopBar />
     <Nav />
-    
     <div className={classNames.content}>
       <Hero />
       <About />

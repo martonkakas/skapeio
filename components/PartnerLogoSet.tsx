@@ -2,25 +2,23 @@ import { ReactNode } from 'react';
 
 import i18n from '@/app/i18n';
 import PartnerLogo from '@/components/PartnerLogo';
+import { cn } from '@/lib/utils';
 
 import styles from '@/components/PartnerLogoSet.module.css'
 
 const { partners } = i18n.en;
 
-const marqueePartners = [
-  ...partners, 
-  ...partners
-];
-
 type PartnerLogoSetProps = {
   prefix?: string;
+  className?: string;
 }
 
 const PartnerLogoSet = ({ 
-  prefix 
+  prefix,
+  className
 }: PartnerLogoSetProps): ReactNode => (
-  <div className={styles.PartnerLogoSet}>
-    {marqueePartners.map((partner, i) => (
+  <div className={cn(styles.PartnerLogoSet, className)}>
+    {partners.map((partner, i) => (
       <PartnerLogo 
         key={`${prefix}-${partner.label}-${i}`} 
         {...partner} 

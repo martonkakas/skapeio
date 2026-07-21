@@ -3,8 +3,8 @@
   position: relative;
   align-items: center;
   justify-content: flex-end;
-  width: calc(var(--spacing) * 20);
-  height: calc(var(--spacing) * 6);
+  width: calc(var(--unit) * 20);
+  height: calc(var(--unit) * 6);
   text-transform: uppercase;
   font-family: var(--font-mono);
   letter-spacing: var(--tracking-widest);
@@ -15,7 +15,7 @@
 
   position: absolute;
   right: 100%;
-  transition: opacity var(--default-transition-duration) ease-in-out;
+  transition: opacity var(--default-transition-duration) var(--default-transition-timing-function);
   opacity: var(--opacity);
   font-size: var(--text-xs);
   line-height: var(--text-xs--line-height);
@@ -28,8 +28,10 @@
 
 .NavItem__Indicator {
   background: var(--color-white);
-  transition: transform 75ms ease-in-out, opacity 75ms ease-in-out;
+  transition: 
+    transform calc(var(--default-transition-duration) / 2) var(--default-transition-timing-function), 
+    opacity calc(var(--default-transition-duration) / 2) var(--default-transition-timing-function);
   transform-origin: right center;
-  width: calc(var(--spacing) * 6);
+  width: calc(var(--unit) * 6);
   height: 0.1875rem;
 }

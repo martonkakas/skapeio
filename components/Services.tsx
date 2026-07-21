@@ -23,7 +23,7 @@ const Services = (): ReactNode => (
           {items.map(({ title, description }, index) => (
             <ServiceCard
               key={index}
-              index={index}
+              index={String(index + 1).padStart(2, '0')}
               title={title}
               description={description}
             />

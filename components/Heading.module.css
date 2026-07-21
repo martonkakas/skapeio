@@ -1,5 +1,5 @@
 .Heading {
-  --gap: calc(var(--spacing) * 2);
+  --gap: calc(var(--unit) * 2);
   --index-width: 1rem;
 
   display: flex; 

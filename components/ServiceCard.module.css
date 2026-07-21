@@ -1,4 +1,4 @@
-.Card {
+.ServiceCard {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -6,9 +6,70 @@
   border-bottom: var(--border-width) solid var(--border-color);
 }
 
-.Card__Content {
+.ServiceCard__Background {
+  --opacity: 0;
+
+  opacity: var(--opacity);
+  transition: opacity calc(2 * var(--default-transition-duration)) var(--default-transition-timing-function);
+}
+
+.ServiceCard:hover .ServiceCard__Background {
+  --opacity: 1;
+}
+
+.ServiceCard__Content {
+  --padding: 6;
+
   display: flex;
+  z-index: 1;
   flex-direction: column;
-  gap: calc(4 * var(--unit));
+  gap: calc(var(--unit) * 4);
   grid-area: 1 / 1 / 1 / 1;
+  padding: calc(var(--unit) * var(--padding));
+}
+
+@media (width >= 64rem) {
+  .ServiceCard__Content {
+    --padding: 8;
+  }
+}
+
+.ServiceCard__Heading {
+  display: flex;
+  align-items: flex-start;
+  gap: calc(var(--unit) * 2);
+  font-family: var(--font-mono);
+  letter-spacing: var(--tracking-widest);
+}
+
+.ServiceCard__Title {
+  flex: 1;
+  text-transform: uppercase;
+  line-height: var(--text-lg--line-height);
+  font-size: var(--text-lg);
+  text-box: trim-both cap alphabetic;
+}
+
+.ServiceCard__Index {
+  opacity: 0.5;
+  width: 1rem;
+  font-size: var(--text-xs);
+  line-height: var(--text-xs--line-height);
+  text-box: trim-both cap alphabetic;
+}
+
+.ServiceCard__Description {
+  --line-height: var(--text-sm--line-height);
+  --font-size: var(--text-sm);
+
+  opacity: 0.75;
+  line-height: var(--line-height);
+  font-size: var(--font-size);
+}
+
+@media (width >= 48rem) {
+  .ServiceCard__Description {
+    --line-height: var(--text-lg--line-height);
+    --font-size: var(--text-lg);
+  }
 }

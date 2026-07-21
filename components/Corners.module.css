@@ -11,8 +11,8 @@
 .Corners__BottomLeft,
 .Corners__BottomRight {
   border: 0.0625rem solid hsl(from var(--color-white) h s l / 30%);
-  width: calc(var(--spacing) * 8);
-  height: calc(var(--spacing) * 8);
+  width: calc(var(--unit) * 8);
+  height: calc(var(--unit) * 8);
 }
 
 .Corners__TopLeft {

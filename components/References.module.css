@@ -1,0 +1,66 @@
+.References__Content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.References__Wrapper,
+.References__Gradients {
+  grid-area: 1 / 1 / 1 / 1;
+}
+
+.References__Wrapper {
+  padding-block: calc(var(--unit) * 16);
+  width: 100%;
+  overflow: hidden;
+}
+
+.References__Wrapper__Marquee {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+@media (width >= 48rem) {
+  .References__Wrapper__Marquee {
+    animation: marquee 60s linear infinite;
+  }
+}
+
+.References__Gradients {
+  display: none;
+  grid-template-columns: calc(var(--unit) * 32) 1fr calc(var(--unit) * 32);
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media (width >= 48rem) {
+  .References__Gradients {
+    display: grid;
+  }
+}
+
+.References__Gradients__Left {
+  grid-area: 1 / 1 / 1 / 1;
+  background: linear-gradient(to left, transparent, black);
+}
+
+.References__Gradients__Right {
+  grid-area: 1 / 3 / 1 / 3;
+  background: linear-gradient(to right, transparent, black);
+}
+
+.PartnerLogoSet {
+  display: none;
+}
+
+@media (width >= 48rem) {
+  .PartnerLogoSet {
+    display: flex;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}

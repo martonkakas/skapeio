@@ -5,12 +5,12 @@
   overflow: hidden;
 }
 
-.Section__Content {
-  z-index: 1;
-  grid-area: 1 / 1 / 1 / 1;
-  position: relative;
-}
-
+.Section__Content,
 .Sculpture {
   grid-area: 1 / 1 / 1 / 1;
+}
+
+.Section__Content {
+  z-index: 1;
+  position: relative;
 }

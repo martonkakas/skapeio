@@ -12,6 +12,7 @@ import styles from '@/components/Section.module.css';
 type SectionProps = {
   id?: string,
   className?: string,
+  contentClassName?: string,
   children: ReactNode,
   decorate?: boolean,
   sculpture?: boolean
@@ -20,6 +21,7 @@ type SectionProps = {
 const Section = ({
   id,
   className,
+  contentClassName,
   children,
   decorate,
   sculpture
@@ -44,7 +46,7 @@ const Section = ({
         </Canvas>
       </div>
     }
-    <div className={styles.Section__Content}>
+    <div className={cn(styles.Section__Content, contentClassName)}>
       {children}
     </div>
   </section>

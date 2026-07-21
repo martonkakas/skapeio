@@ -6,6 +6,7 @@ import i18n from '@/app/i18n';
 import Container from '@/components/Container';
 import Section from '@/components/Section';
 
+import styles from '@/components/Hero.module.css';
 
 const { things } = i18n.en.hero;
 
@@ -23,12 +24,12 @@ const Hero = (): ReactNode => {
     <Section 
       id="home" 
       sculpture={true}
-      className="min-h-screen w-full"
+      className={styles.Hero}
     >
       <Container>
-        <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-[-0.05em] leading-[0.9] mix-blend-difference max-w-5xl">
+        <h1 className={styles.Hero__Title}>
           hello, we are skape.io and we do{' '}
-          <span className="relative inline-flex items-center">
+          <span className={styles.Hero__Title__Things}>
             <AnimatePresence mode="wait">
               <motion.span
                 key={index}
@@ -36,12 +37,12 @@ const Hero = (): ReactNode => {
                 animate={{ opacity: 1, filter: 'blur(0px)', letterSpacing: '-0.05em' }}
                 exit={{ opacity: 0, filter: 'blur(10px)', letterSpacing: '0.05em' }}
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute left-0 whitespace-nowrap"
+                className={styles.Hero__Title__Things__Thing}
               >
                 {things[index]}
               </motion.span>
             </AnimatePresence>
-            <span className="opacity-0 pointer-events-none whitespace-nowrap">
+            <span className={styles.Hero__Title__Things__Hidden}>
               {things.reduce((a, b) => a.length > b.length ? a : b)}
             </span>
           </span>

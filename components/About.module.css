@@ -6,7 +6,7 @@
 
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
-  gap: calc(var(--spacing) * var(--gap));
+  gap: calc(var(--unit) * var(--gap));
   opacity: 0.75;
   font-size: var(--font-size);
   line-height: var(--line-height);

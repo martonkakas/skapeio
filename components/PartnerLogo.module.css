@@ -5,12 +5,12 @@
 
   display: flex;
   flex-shrink: 0;
-  width: calc(var(--spacing) * var(--width));
-  height: calc(var(--spacing) * var(--height));
+  width: calc(var(--unit) * var(--width));
+  height: calc(var(--unit) * var(--height));
   align-items: center;
   justify-content: center;
   opacity: var(--opacity);
-  transition: opacity var(--default-transition-duration) ease-in-out;
+  transition: opacity var(--default-transition-duration) var(--default-transition-timing-function);
   
   svg {
     width: 100%;

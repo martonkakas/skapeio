@@ -2,7 +2,7 @@
   --padding-inline: 6;
   
   background: var(--color-black);
-  padding-inline: calc(var(--spacing) * var(--padding-inline));
+  padding-inline: calc(var(--unit) * var(--padding-inline));
   text-transform: uppercase;
   line-height: 1;
   font-family: var(--font-mono);
@@ -27,7 +27,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: calc(var(--spacing) * 4);
+  gap: calc(var(--unit) * 4);
   width: 100%;
 }
 
@@ -41,7 +41,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: calc(var(--spacing) * 4);
+  gap: calc(var(--unit) * 4);
 }
 
 @media (width >= 48rem) {
@@ -52,7 +52,7 @@
 
 .Footer__Links {
   display: flex;
-  gap: calc(var(--spacing) * 4);
+  gap: calc(var(--unit) * 4);
 }
 
 .Footer__Logo,
@@ -63,11 +63,11 @@
 
 .Footer__Logo {
   width: 7.5rem;
-  height: calc(var(--spacing) * 6);
+  height: calc(var(--unit) * 6);
 }
 
 .Footer__Link {
-  transition: opacity var(--default-transition-duration) ease-in-out;
+  transition: opacity var(--default-transition-duration) var(--default-transition-timing-function);
 }
 
 .Footer__Link:hover {

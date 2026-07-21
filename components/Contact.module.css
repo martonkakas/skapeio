@@ -39,10 +39,10 @@
 
   transform: scaleX(var(--scaleX));
   transform-origin: left center;
-  transition: transform 400ms var(--default-transition-timing-function);
+  transition: transform calc(2 * var(--default-transition-duration)) var(--default-transition-timing-function);
   background: currentColor;
   width: 100%;
-  height: calc(var(--spacing) * 1);
+  height: calc(var(--unit) * 1);
 }
 
 .Contact__Link:hover .Contact__Link__Line {

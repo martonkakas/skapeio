@@ -1,6 +1,6 @@
 .TopLink {
   position: fixed;
-  top: calc(var(--spacing) * 6);
+  top: calc(var(--unit) * 6);
   left: 50%;
   z-index: 50;
   mix-blend-mode: difference;

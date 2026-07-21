@@ -11,7 +11,7 @@
 
 @layer utilities {
   .bg-grid-pattern {
-    background-size: 3.125rem 3.125rem;
+    background-size: 3rem 3rem;
     background-image: 
       linear-gradient(to right, rgba(255, 255, 255, 0.03) 0.0625rem, transparent 0.0625rem),
       linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 0.0625rem, transparent 0.0625rem);
@@ -19,20 +19,10 @@
   }
 }
 
-@keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
-}
-
-.animate-marquee {
-  animation: marquee 60s linear infinite;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  /* Hides horizontal scrollbar */
   overflow-x: hidden;
 }

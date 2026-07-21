@@ -1,0 +1,48 @@
+.Hero {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.Hero__Title {
+  --font-size: var(--text-4xl);
+  
+  max-width: var(--container-5xl);
+  line-height: 0.9;
+  font-size: var(--font-size);
+  font-weight: 800;
+  letter-spacing: var(--tracking-tighter);
+  mix-blend-mode: difference;
+}
+
+@media (width >= 48rem) {
+  .Hero__Title {
+    --font-size: var(--text-6xl);
+  }
+}
+
+@media (width >= 64rem) {
+  .Hero__Title {
+    --font-size: var(--text-8xl);
+  }
+}
+
+.Hero__Title__Things {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+}
+
+.Hero__Title__Things__Thing,
+.Hero__Title__Things__Hidden {
+  white-space: nowrap;
+}
+
+.Hero__Title__Things__Thing {
+  position: absolute;
+  left: 0;
+}
+
+.Hero__Title__Things__Hidden {
+  opacity: 0;
+  pointer-events: none;
+}
