@@ -26,7 +26,7 @@ const Section = ({
 }: SectionProps) => (
   <section 
     id={id} 
-    className={cn(styles.section, className)}
+    className={cn(styles.Section, className)}
   >
     {decorate && 
       <>
@@ -35,13 +35,16 @@ const Section = ({
       </>
     }
     {sculpture && 
-      <div className={styles.sculpture}>
-        <Canvas dpr={[1, 1.5]} camera={{ position: [0, 0, 40], fov: 45 }}>
+      <div className={styles.Sculpture}>
+        <Canvas 
+          dpr={[1, 1.5]} 
+          camera={{ position: [0, 0, 40], fov: 45 }}
+        >
           <Sculpture />
         </Canvas>
       </div>
     }
-    <div className={styles.content}>
+    <div className={styles.Section__Content}>
       {children}
     </div>
   </section>

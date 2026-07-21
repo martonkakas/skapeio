@@ -1,14 +1,15 @@
-.background {
+.Background {
   display: grid;
   grid-area: 1 / 1 / 1 / 1;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
 
-.color {
+.Color {
   grid-area: 1 / 1 / 1 / 1;
+  background: hsl(from var(--color-white) h s l / 5%);
 }
 
-.pattern {
+.Pattern {
   grid-area: 1 / 1 / 1 / 1;
 }

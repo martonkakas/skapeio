@@ -8,14 +8,19 @@ import JordBanner from '@/components/JordBanner';
 import Nav from '@/components/Nav';
 import References from '@/components/References';
 import Services from '@/components/Services';
-import TopBar from '@/components/TopBar';
+import TopBar from '@/components/TopLink';
+
+const classNames = {
+  main: `min-h-screen relative`,
+  content: `divide-y divide-white/10`
+}
 
 const Home = (): ReactNode => (
-  <main className="min-h-screen bg-black bg-grid-pattern relative">
+  <main className={classNames.main}>
     <TopBar />
     <Nav />
     
-    <div className="divide-y divide-white/10">
+    <div className={classNames.content}>
       <Hero />
       <About />
       <References />

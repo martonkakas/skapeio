@@ -1,0 +1,34 @@
+.Heading {
+  --gap: calc(var(--spacing) * 2);
+  --index-width: 1rem;
+
+  display: flex; 
+  flex-direction: column; 
+  align-items: flex-start; 
+  gap: var(--gap);
+  text-transform: uppercase;
+  font-family: var(--font-mono); 
+  font-weight: 400; 
+  letter-spacing: var(--tracking-widest);
+}
+
+@media (width >= 82rem) {
+  .Heading {
+    flex-direction: row;
+    margin-left: calc(-1 * (var(--index-width) + var(--gap)));
+  }
+}
+
+.Heading__Index {
+  opacity: 0.5;
+  width: var(--index-width);
+  line-height: var(--text-xs--line-height);
+  font-size: var(--text-xs);
+  text-box: trim-both cap alphabetic;
+}
+
+.Heading__Title {
+  line-height: var(--text-3xl--line-height);
+  font-size: var(--text-3xl);
+  text-box: trim-both cap alphabetic;
+}

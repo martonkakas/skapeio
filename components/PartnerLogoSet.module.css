@@ -1,0 +1,17 @@
+.PartnerLogoSet {
+  --gap: 20;
+  --padding-right: 20;
+
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: calc(var(--spacing) * var(--gap));
+  padding-right: calc(var(--spacing) * var(--padding-right));
+}
+
+@media (width >= 48rem) {
+  .PartnerLogoSet {
+    --gap: 28;
+    --padding-right: 28;
+  }
+}

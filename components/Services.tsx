@@ -6,24 +6,21 @@ import Corners from '@/components/Corners';
 import Heading from '@/components/Heading';
 import Section from '@/components/Section';
 import ServiceCard from '@/components/ServiceCard';
-import { cn } from '@/lib/utils';
 
 import styles from '@/components/Services.module.css';
 
-const { services } = i18n.hu;
+const { title, items } = i18n.en.services;
 
 const Services = (): ReactNode => (
-  <Section 
-    id="services" 
-  >
+  <Section id="capabilities">
     <Container>
       <Heading
         index="02"
-        title="Capabilities"
+        title={title}
       />
-      <div className={cn(styles.gridWrapper, 'border-t border-l border-white/10')}>
-        <div className={styles.grid}>
-          {services.map(({ title, description }, index) => (
+      <div className={styles.GridWrapper}>
+        <div className={styles.Grid}>
+          {items.map(({ title, description }, index) => (
             <ServiceCard
               key={index}
               index={index}

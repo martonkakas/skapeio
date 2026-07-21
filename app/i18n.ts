@@ -1,5 +1,5 @@
 const i18n = {
-  hu: {
+  en: {
     nav: [{ 
       id: 'home', 
       label: 'Home' 
@@ -13,8 +13,8 @@ const i18n = {
       id: 'jord', 
       label: 'JORD' 
     }, { 
-      id: 'services', 
-      label: 'Services' 
+      id: 'capabilities', 
+      label: 'Capabilities' 
     }, { 
       id: 'contact', 
       label: 'Contact' 
@@ -73,25 +73,28 @@ const i18n = {
         href: '#'
       }]
     },
-    services: [{
-      title: 'Web Dev',
-      description: 'High-performance, secure digital interfaces engineered for scale and resilience.'
-    }, {
-      title: 'DevOps',
-      description: 'Continuous integration, automated deployments, and unyielding infrastructure architecture.'
-    }, {
-      title: '360° IT PM',
-      description: 'End-to-end tactical oversight, ensuring absolute operational success from inception to deployment.'
-    }, {
-      title: 'Networking',
-      description: 'Secure, low-latency communication matrices designed for classified data transmission.'
-    }, {
-      title: 'Privacy',
-      description: 'Zero-knowledge architectures and cryptographic defense mechanisms to protect sensitive assets.'
-    }, {
-      title: 'AI Solutions',
-      description: 'Strategic implementation of artificial intelligence for predictive analysis and automation.'
-    }],
+    services: {
+      title: 'Capabilities',
+      items: [{
+        title: 'Web Dev',
+        description: 'High-performance, secure digital interfaces engineered for scale and resilience.'
+      }, {
+        title: 'DevOps',
+        description: 'Continuous integration, automated deployments, and unyielding infrastructure architecture.'
+      }, {
+        title: '360° IT PM',
+        description: 'End-to-end tactical oversight, ensuring absolute operational success from inception to deployment.'
+      }, {
+        title: 'Networking',
+        description: 'Secure, low-latency communication matrices designed for classified data transmission.'
+      }, {
+        title: 'Privacy',
+        description: 'Zero-knowledge architectures and cryptographic defense mechanisms to protect sensitive assets.'
+      }, {
+        title: 'AI Solutions',
+        description: 'Strategic implementation of artificial intelligence for predictive analysis and automation.'
+      }]
+    },
     contact: {
       headline: 'Contact us'
     },

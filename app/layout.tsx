@@ -23,11 +23,17 @@ type RootLayoutProps = {
   children: ReactNode
 };
 
+const classNames = {
+  html: `${jetbrainsMono.variable} ${geist.variable} dark`,
+  body: `bg-black bg-grid-pattern text-[#e0e0e0] font-geist font-medium 
+    leading-normal selection:bg-white selection:text-black`
+};
+
 const RootLayout = ({ 
   children 
 }: RootLayoutProps): ReactNode => (
-  <html lang="en" className={`${jetbrainsMono.variable} ${geist.variable} dark`}>
-    <body suppressHydrationWarning className="bg-black text-[#e0e0e0] font-geist font-medium leading-normal selection:bg-white selection:text-black">
+  <html lang="en" className={classNames.html}>
+    <body suppressHydrationWarning className={classNames.body}>
       {children}
     </body>
   </html>

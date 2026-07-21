@@ -1,0 +1,22 @@
+.About__Content {
+  --columns: 1;
+  --gap: 6;
+  --font-size: var(--text-sm);
+  --line-height: var(--text-sm--line-height);
+
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  gap: calc(var(--spacing) * var(--gap));
+  opacity: 0.75;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+@media (width >= 48rem) {
+  .About__Content {
+    --columns: 2;
+    --gap: 12;
+    --font-size: var(--text-lg);
+    --line-height: var(--text-lg--line-height);
+  }
+}

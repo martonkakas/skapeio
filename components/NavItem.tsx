@@ -1,6 +1,8 @@
 import { ReactNode, useEffect,useRef, useState } from 'react';
 import Link from 'next/link';
 
+import styles from '@/components/NavItem.module.css';
+
 type NavItemProps = {
   item: any,
   mouseY: number | null
@@ -39,16 +41,14 @@ const NavItem = ({
     <Link
       ref={ref}
       href={`#${item.id}`}
-      className="group flex items-center justify-end h-6 w-20 relative"
+      className={styles.NavItem}
     >
-      <span className="text-xs font-mono tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute right-full whitespace-nowrap">
+      <span className={styles.NavItem__Label}>
         {item.label}
       </span>
       <div 
-        className="bg-white transition-transform duration-75 ease-out origin-right"
+        className={styles.NavItem__Indicator}
         style={{ 
-          width: '24px', 
-          height: '3px', 
           transform: `scaleX(${scale})`,
           opacity 
         }}

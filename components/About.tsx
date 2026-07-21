@@ -5,7 +5,9 @@ import Container from '@/components/Container';
 import Heading from '@/components/Heading';
 import Section from '@/components/Section';
 
-const { index, title, text } = i18n.hu.about;
+import styles from '@/components/About.module.css';
+
+const { index, title, text } = i18n.en.about;
 
 const About = (): ReactNode => (
   <Section 
@@ -17,7 +19,7 @@ const About = (): ReactNode => (
         index={index}
         title={title}
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 opacity-75 text-sm md:text-lg">
+      <div className={styles.About__Content}>
         {text.map((p, i) => (
           <p key={i}>{p}</p>
         ))}

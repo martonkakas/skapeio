@@ -1,17 +1,22 @@
 import { ReactNode } from 'react';
 
-import { cn } from '@/lib/utils';
+import styles from '@/components/Container.module.css';
 
 type ContainerProps = {
-  className?: string,
-  children: ReactNode
+  children: ReactNode,
+  isFooter?: boolean,
+  gap?: number,
 };
 
 const Container = ({
-  className,
-  children 
+  children,
+  isFooter = false,
+  gap = 8
 }: ContainerProps): ReactNode => (
-  <div className={cn('flex flex-col items-start gap-8 px-4 py-32 max-w-7xl mx-auto w-full h-full', className)}>
+  <div 
+    className={isFooter ? styles.ContainerFooter : styles.Container}
+    style={{ '--gap': gap } as React.CSSProperties}
+  >
     {children}
   </div>
 );

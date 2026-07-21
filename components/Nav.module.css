@@ -1,0 +1,10 @@
+.Nav {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  right: calc(var(--spacing) * 6);
+  z-index: 50;
+  flex-direction: column;
+  align-items: end;
+  transform: translateY(-50%);
+}

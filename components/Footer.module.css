@@ -1,0 +1,75 @@
+.Footer {
+  --padding-inline: 6;
+  
+  background: var(--color-black);
+  padding-inline: calc(var(--spacing) * var(--padding-inline));
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: var(--tracking-widest);
+}
+
+@media (width >= 48rem) {
+  .Footer {
+    --padding-inline: 12;
+  }
+}
+
+@media (width >= 64rem) {
+  .Footer {
+    --padding-inline: 24;
+  }
+}
+
+.Footer__Inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(var(--spacing) * 4);
+  width: 100%;
+}
+
+@media (width >= 48rem) {
+  .Footer__Inner {
+    flex-direction: row;
+  }
+}
+
+.Footer__Items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--spacing) * 4);
+}
+
+@media (width >= 48rem) {
+  .Footer__Items {
+    flex-direction: row;
+  }
+}
+
+.Footer__Links {
+  display: flex;
+  gap: calc(var(--spacing) * 4);
+}
+
+.Footer__Logo,
+.Footer__Copy,
+.Footer__Link {
+  opacity: 0.5;
+}
+
+.Footer__Logo {
+  width: 7.5rem;
+  height: calc(var(--spacing) * 6);
+}
+
+.Footer__Link {
+  transition: opacity var(--default-transition-duration) ease-in-out;
+}
+
+.Footer__Link:hover {
+  opacity: 1;
+}

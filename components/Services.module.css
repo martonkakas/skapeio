@@ -1,10 +1,15 @@
-.gridWrapper {
+.GridWrapper {
+  --border-width: 0.0625rem;
+  --border-color: hsl(from var(--color-white) h s l / 10%);
+
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  border-top: var(--border-width) solid var(--border-color);
+  border-left: var(--border-width) solid var(--border-color);
 }
 
-.grid {
+.Grid {
   --cols: 3;
 
   display: grid;
@@ -13,13 +18,13 @@
 }
 
 @media screen and (max-width: 52em) {
-  .grid {
+  .Grid {
     --cols: 2;
   }
 }
 
 @media screen and (max-width: 32em) {
-  .grid {
+  .Grid {
     --cols: 1;
   }
 }

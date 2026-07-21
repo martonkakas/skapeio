@@ -1,0 +1,35 @@
+.NavItem {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  width: calc(var(--spacing) * 20);
+  height: calc(var(--spacing) * 6);
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  letter-spacing: var(--tracking-widest);
+}
+
+.NavItem__Label {
+  --opacity: 0;
+
+  position: absolute;
+  right: 100%;
+  transition: opacity var(--default-transition-duration) ease-in-out;
+  opacity: var(--opacity);
+  font-size: var(--text-xs);
+  line-height: var(--text-xs--line-height);
+  white-space: nowrap ;
+}
+
+.NavItem:hover .NavItem__Label {
+  --opacity: 1;
+}
+
+.NavItem__Indicator {
+  background: var(--color-white);
+  transition: transform 75ms ease-in-out, opacity 75ms ease-in-out;
+  transform-origin: right center;
+  width: calc(var(--spacing) * 6);
+  height: 0.1875rem;
+}

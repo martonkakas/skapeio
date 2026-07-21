@@ -6,9 +6,8 @@ import i18n from '@/app/i18n';
 import Container from '@/components/Container';
 import Section from '@/components/Section';
 
-import styles from '@/components/Hero.module.css';
 
-const { things } = i18n.hu.hero;
+const { things } = i18n.en.hero;
 
 const Hero = (): ReactNode => {
   const [index, setIndex] = useState(0);
@@ -26,7 +25,7 @@ const Hero = (): ReactNode => {
       sculpture={true}
       className="min-h-screen w-full"
     >
-      <Container className={styles.container}>
+      <Container>
         <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-[-0.05em] leading-[0.9] mix-blend-difference max-w-5xl">
           hello, we are skape.io and we do{' '}
           <span className="relative inline-flex items-center">

@@ -4,22 +4,23 @@ import i18n from '@/app/i18n';
 import Container from '@/components/Container';
 import Section from '@/components/Section';
 
-const { headline } = i18n.hu.contact;
+import styles from '@/components/Contact.module.css';
+
+const { headline } = i18n.en.contact;
 
 const Contact = (): ReactNode => (
   <Section 
     id="contact" 
     decorate={true}
   >
-    <Container>
-      <div className="opacity-50 text-xs tracking-widest uppercase font-mono">{headline}</div>
+    <Container gap={0}>
+      <div className={styles.Contact__Headline}>{headline}</div>
       <a 
         href="mailto:hello@skape.io" 
-        className="flex flex-col text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-tighter transition-colors group"
-        style={{ textBox: 'trim-both cap alphabetic' }}
+        className={styles.Contact__Link}
       >
         hello@skape.io
-        <div className="w-full h-1 bg-[currentcolor] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+        <div className={styles.Contact__Link__Line} />
       </a>
     </Container>
   </Section>

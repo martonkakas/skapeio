@@ -8,41 +8,33 @@ import Container from '@/components/Container';
 import Planet from '@/components/Planet';
 import Section from '@/components/Section';
 
-const { jord } = i18n.hu;
+import styles from '@/components/JordBanner.module.css';
+
+const { jord } = i18n.en;
 
 const JordBanner = (): ReactNode => (
   <Section 
     id="jord" 
     decorate={true}
   >
-    <div className="absolute right-[0] md:right-[-10%] top-[-20%] bottom-[-20%] w-[100%] md:w-[100%] lg:w-[60%] z-0 pointer-events-none opacity-40 md:opacity-100">
+    <div className={styles.JordBanner__PlanetWrapper}>
       <Canvas dpr={[1, 1.5]} camera={{ position: [0, 0, 30], fov: 45 }}>
         <Planet />
       </Canvas>
     </div>
     
-    <Container>
-      <div className="flex flex-col gap-6 items-start">
-        <h2 
-          className="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-tighter" 
-          style={{ textBox: 'trim-both cap alphabetic' }}
-        >{jord.title}</h2>
-        
-        {jord.text.map((p, i) => (
-          <p 
-            key={i} 
-            className="opacity-75 text-sm md:text-lg max-w-2xl"
-          >{p}</p>
-        ))}
-        
-        {jord.cta.map(({ label, href }, i) => (
-          <Button
-            key={i}
-            label={label}
-            href={href}
-          />
-        ))}
-      </div>
+    <Container gap={6}>
+      <h2 className={styles.JordBanner__Title}>{jord.title}</h2>
+      {jord.text.map((p, i) => (
+        <p key={i} className={styles.JordBanner__Text}>{p}</p>
+      ))}
+      {jord.cta.map(({ label, href }, i) => (
+        <Button
+          key={i}
+          label={label}
+          href={href}
+        />
+      ))}
     </Container>
   </Section>
 );
