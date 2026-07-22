@@ -3,8 +3,10 @@
   border: 0.0625rem solid hsl(from var(--color-white) h s l / 10%);
   background: var(--color-black);
   box-shadow: 0 0 calc(var(--unit) * 4) calc(var(--unit) * 4) hsl(0 0 0 / 40%);
-  width: 100%;
+  width: calc(100% - calc(var(--unit) * 4));
   max-width: var(--container-md);
+  max-height: calc(100dvh - calc(var(--unit) * 4));
+  overflow: hidden;
   color: var(--colow-white);
 }
 
@@ -17,6 +19,7 @@
   display: flex;
   flex-direction: column;
   gap: calc(var(--unit) * 6);
+  max-height: calc(100dvh - calc(var(--unit) * 4));
   padding: calc(var(--unit) * 6);
 }
 
@@ -42,4 +45,7 @@
   flex-direction: column;
   flex: 1;
   gap: calc(var(--unit) * 4);
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: calc(var(--unit) * 2);
 }

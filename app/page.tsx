@@ -7,6 +7,7 @@ import Hero from '@/components/Hero';
 import ImprintDialog from '@/components/ImprintDialog';
 import JordBanner from '@/components/JordBanner';
 import Nav from '@/components/Nav';
+import PrivacyPolicyDialog from '@/components/PrivacyPolicyDialog';
 import References from '@/components/References';
 import Services from '@/components/Services';
 import TopBar from '@/components/TopLink';
@@ -28,6 +29,7 @@ const Home = (): ReactNode => (
       <Services />
       <Contact />  
       <Footer />
+      <PrivacyPolicyDialog />
       <ImprintDialog />
     </div>
   </main>

@@ -103,9 +103,6 @@ const i18n = {
         dialogId: 'privacy-policy',
         label: 'Privacy Policy'
       }, {
-        dialogId: 'cookie-settings',
-        label: 'Cookie Settings'
-      }, {
         dialogId: 'imprint',
         label: 'Imprint'
       }]
