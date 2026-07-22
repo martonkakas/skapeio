@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import Link from 'next/link';
 
 import i18n from '@/app/i18n';
 import Container from '@/components/Container';
@@ -18,12 +17,13 @@ const Footer = (): ReactNode => (
         <div className={styles.Footer__Items}>
           <span className={styles.Footer__Copy}>&copy; {currentYear} skape.io</span>
           <div className={styles.Footer__Links}>
-            {items.map(({ href, label }, i) => (
-              <Link 
+            {items.map(({ dialogId, label }, i) => (
+              <button 
                 key={i}
-                href={href}
-                className={styles.Footer__Link}
-              >{label}</Link>
+                commandFor={dialogId}
+                command="show-modal"
+                className={styles.Footer__Button}
+              >{label}</button>
             ))}
           </div>
         </div>

@@ -100,13 +100,13 @@ const i18n = {
     },
     footer: {
       items: [{
-        href: '/privacy',
+        dialogId: 'privacy-policy',
         label: 'Privacy Policy'
       }, {
-        href: '/cookie',
+        dialogId: 'cookie-settings',
         label: 'Cookie Settings'
       }, {
-        href: '/imprint',
+        dialogId: 'imprint',
         label: 'Imprint'
       }]
     }

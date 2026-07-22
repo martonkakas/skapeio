@@ -1,0 +1,45 @@
+.Dialog {
+  place-self: center;
+  border: 0.0625rem solid hsl(from var(--color-white) h s l / 10%);
+  background: var(--color-black);
+  box-shadow: 0 0 calc(var(--unit) * 4) calc(var(--unit) * 4) hsl(0 0 0 / 40%);
+  width: 100%;
+  max-width: var(--container-md);
+  color: var(--colow-white);
+}
+
+.Dialog::backdrop {
+  background: hsl(from var(--color-black) h s l / 40%);
+  backdrop-filter: blur(1rem);
+}
+
+.Dialog__Section {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--unit) * 6);
+  padding: calc(var(--unit) * 6);
+}
+
+.Dialog__Header {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: calc(var(--unit) * 6);
+}
+
+.Dialog__Title {
+  flex: 1;
+  text-transform: uppercase;
+  line-height: var(--text-lg--line-height);
+  font-family: var(--font-mono);
+  font-size: var(--text-2xl);
+  letter-spacing: var(--tracking-widest);
+  text-box: trim-both cap alphabetic;
+}
+
+.Dialog__Content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: calc(var(--unit) * 4);
+}

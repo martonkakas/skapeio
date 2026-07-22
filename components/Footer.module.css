@@ -57,7 +57,7 @@
 
 .Footer__Logo,
 .Footer__Copy,
-.Footer__Link {
+.Footer__Button {
   opacity: 0.5;
 }
 
@@ -66,10 +66,11 @@
   height: calc(var(--unit) * 6);
 }
 
-.Footer__Link {
+.Footer__Button {
   transition: opacity var(--default-transition-duration) var(--default-transition-timing-function);
+  text-transform: inherit;
 }
 
-.Footer__Link:hover {
+.Footer__Button:hover {
   opacity: 1;
 }

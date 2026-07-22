@@ -4,6 +4,7 @@ import About from '@/components/About';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
+import ImprintDialog from '@/components/ImprintDialog';
 import JordBanner from '@/components/JordBanner';
 import Nav from '@/components/Nav';
 import References from '@/components/References';
@@ -27,6 +28,7 @@ const Home = (): ReactNode => (
       <Services />
       <Contact />  
       <Footer />
+      <ImprintDialog />
     </div>
   </main>
 );
