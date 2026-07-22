@@ -1,11 +1,11 @@
-import { ReactNode } from 'react';
+import { ComponentProps, ReactNode } from 'react';
 
 import styles from '@/components/Button.module.css';
 
 type ButtonCommandProps = {
   label: string,
   commandFor: string,
-  command: StandardCommand | `--${string}` | undefined,
+  command: ComponentProps<'button'>['command'],
 }
 
 const ButtonCommand = ({
