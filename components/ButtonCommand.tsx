@@ -14,7 +14,7 @@ const ButtonCommand = ({
   command
 }: ButtonCommandProps): ReactNode => (
   <button
-    commandFor={commandFor}
+    commandfor={commandFor}
     command={command}
     className={styles.Button}
   >

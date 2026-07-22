@@ -20,7 +20,7 @@ const Footer = (): ReactNode => (
             {items.map(({ dialogId, label }, i) => (
               <button 
                 key={i}
-                commandFor={dialogId}
+                commandfor={dialogId}
                 command="show-modal"
                 className={styles.Footer__Button}
               >{label}</button>
